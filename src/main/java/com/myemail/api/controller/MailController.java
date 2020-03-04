@@ -56,7 +56,7 @@ public class MailController {
                 return MailUtil.getFailureResponse(errorMessage);
             }
         } else {
-            errorMessage = String.format("'Kafka' profile is not active to publish, active profiles: {}", env.getActiveProfiles());
+            errorMessage = String.format("'Kafka' profile is not active to publish, active profiles: %s", env.getActiveProfiles());
             LOG.warn(errorMessage);
             return MailUtil.getFailureResponse(errorMessage);
         }
