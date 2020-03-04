@@ -34,6 +34,8 @@ paths:
       responses:
         '200':
           description: OK
+          schema:
+            $ref: '#/definitions/Response'
         '201':
           description: Created
         '401':
@@ -42,6 +44,8 @@ paths:
           description: Forbidden
         '404':
           description: Not Found
+        '500':
+          description: Internal Server Error
       deprecated: false
   /v1/group/mail/sent:
     post:
