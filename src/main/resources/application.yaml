@@ -1,0 +1,24 @@
+spring:
+  profiles:
+    active: kafka
+  mail:
+    host: smtp.host
+    port: 587
+    username: username
+    password: password
+    properties:
+      mail:
+        smtp:
+          auth: true
+          connectiontimeout: 5000
+          timeout: 5000
+          writetimeout: 5000
+          starttls:
+            enable: true
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+
+kafka:
+  mail:
+    topic: mailjet
